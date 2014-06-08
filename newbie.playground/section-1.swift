@@ -86,6 +86,45 @@ var manyNumbers = [1, 2, 3]
 // sort([1,3,10,5,2,] {(lhs:Int, rhs:Int) -> Bool in return lhs > rhs})
 
 
+// similar concept to Maybe in Haskell
+enum CalculationResult {
+    case Success(Int)
+    case Error(String)
+}
+
+func getElematryCalcImproved
+    (type: ElematryCalculationType) -> ((Int, Int) -> CalculationResult) {
+    
+    switch type {
+    case ElematryCalculationType.addition:
+        return {(Int lhs, Int rhs) -> CalculationResult in
+            return CalculationResult.Success(lhs + rhs)}
+    case ElematryCalculationType.subtraction:
+        return {(Int lhs, Int rhs) -> CalculationResult in
+            return CalculationResult.Success(lhs - rhs)}
+    case ElematryCalculationType.multiplication:
+        return {(Int lhs, Int rhs) -> CalculationResult in
+            return CalculationResult.Success(lhs * rhs)}
+    case ElematryCalculationType.division:
+        return {(Int lhs, Int rhs) -> CalculationResult in
+            if rhs == 0 {
+                // division through 0 is not allowed
+                return CalculationResult.Error("Error Division / 0")
+            } else {
+                return CalculationResult.Success(lhs / rhs)
+            }
+        }
+    }
+}
+
+// returns a Int in case of success and a String in case of failure
+let result = getElematryCalcImproved(ElematryCalculationType.division)(1, 0)
+switch result {
+case let .Success(result):
+    println(result)
+case let .Error(error):
+    println(error)
+}
 
 
 
