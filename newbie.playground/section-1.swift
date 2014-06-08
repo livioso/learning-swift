@@ -126,6 +126,30 @@ case let .Error(error):
     println(error)
 }
 
+protocol AbsoluteValue {
+    func abs() -> Double
+}
+
+// extend Double with an abs method
+extension Double: AbsoluteValue {
+    func abs() -> Double{
+        var absValue = self
+        
+        if(absValue < 0) {
+            absValue = -absValue
+        }
+        
+        return absValue
+    }
+}
+
+(+7.1).abs()
+(-7.1).abs()
+
+let protocolValue: AbsoluteValue = -11.0
+protocolValue.abs()
+
+
 
 
 
