@@ -80,6 +80,13 @@ getElematryCalc(ElematryCalculationType.subtraction)(5, 2)
 getElematryCalc(ElematryCalculationType.multiplication)(5, 3)
 getElematryCalc(ElematryCalculationType.division)(15, 5)
 
+var manyNumbers = [1, 2, 3]
+// crashes XCode :-/
+// manyNumbers.map({number + 2})
+// sort([1,3,10,5,2,] {(lhs:Int, rhs:Int) -> Bool in return lhs > rhs})
+
+
+
 
 
 
