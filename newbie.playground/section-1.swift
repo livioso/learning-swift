@@ -367,6 +367,49 @@ for _ in 0..4 {
     println(traficLight.toRaw())
 }
 
+protocol Vehicle {
+    var currentPassengerNumber: Int { get set }
+    func maxPassengerNumber() -> Int
+}
+
+class Bicyle: Vehicle {
+    var currentPassengerNumber: Int = 0
+    
+    convenience init() {
+        // must call a designated init
+        self.init(passenger: 1)
+    }
+    
+    init(passenger: Int) {
+        currentPassengerNumber = passenger
+    }
+    
+    func maxPassengerNumber() -> Int {
+        return 1
+    }
+    
+    @final func sound () {
+        println("Pew, pew")
+    }
+}
+
+
+// implicit already a Vehicle
+class MotorBicyle: Bicyle, Vehicle {
+    override func maxPassengerNumber() -> Int {
+        return 2
+    }
+    
+    // error: instance method overrides 
+    // a 'final' instance method
+    // override func sound () {
+    //    println("Brum, Brum")
+    //}
+}
+
+// derived from super class
+MotorBicyle() // convenience init
+MotorBicyle(passenger: 2)
 
 
 
