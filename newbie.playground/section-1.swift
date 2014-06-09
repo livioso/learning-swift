@@ -313,5 +313,23 @@ enum Barcode {
     case QR(String)
 }
 
+struct SomeStruct {
+}
+
+class SomeClass {
+}
+
+var a = SomeClass()
+var b = SomeClass()
+
+if a !== b {
+    println("not yet identical")
+}
+
+a = b
+if a === b {
+    println("now identical")
+}
+
 
 
