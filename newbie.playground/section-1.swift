@@ -331,5 +331,23 @@ if a === b {
     println("now identical")
 }
 
+struct Marks {
+    var marks: Double[] = []
+    
+    // computed property 
+    // when ever the value is 
+    // requested the average is cacluated
+    var average: Double {
+    get {
+        var sum: Double = 0.0
+        for each in marks {
+            sum += each
+        }
+        return sum / Double(marks.count)
+    }
+    }
+}
+
+
 
 
