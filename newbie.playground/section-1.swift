@@ -348,6 +348,27 @@ struct Marks {
     }
 }
 
+enum TraficLight:String {
+    case Red = "Red", Green = "Green", Yellow = "Yellow"
+    
+    mutating func nextState() {
+        switch self {
+        case Red: self = .Green
+        case Green: self = .Yellow
+        case Yellow: self = .Red
+    }
+    }
+}
+
+var traficLight: TraficLight = .Green
+
+for _ in 0..4 {
+    traficLight.nextState()
+    println(traficLight.toRaw())
+}
+
+
+
 
 
 
