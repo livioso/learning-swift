@@ -411,7 +411,21 @@ class MotorBicyle: Bicyle, Vehicle {
 MotorBicyle() // convenience init
 MotorBicyle(passenger: 2)
 
+class Person {
+    var name: String
+    init (name: String) {
+        println("Person init " + name)
+        self.name = name
+    }
+    
+    deinit {
+      println("Person deinit " + self.name)
+    }
+}
 
+var ref1: Person? = Person(name: "Sepp")
+var ref2: Person? = Person(name: "Hans")
+var ref3: Person? = ref1
 
-
-
+ref1 = nil
+ref3 = nil // why doesn't ARC kick in here? WTF? :-/
