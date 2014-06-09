@@ -149,6 +149,13 @@ extension Double: AbsoluteValue {
 let protocolValue: AbsoluteValue = -11.0
 protocolValue.abs()
 
+// ...are you serious? This works?! WTF?! :)
+typealias 💩 = String
+var 💣:💩 = "😃🔫"
+println(💣)
+
+
+
 
 
 
