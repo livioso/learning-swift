@@ -423,9 +423,8 @@ class Person {
     }
 }
 
-var ref1: Person? = Person(name: "Sepp")
-var ref2: Person? = Person(name: "Hans")
-var ref3: Person? = ref1
+var ref1: Person = Person(name: "Sepp")
+var ref2: Person = ref1
 
-ref1 = nil
-ref3 = nil // why doesn't ARC kick in here? WTF? :-/
+ref1 = Person(name: "Hans")
+ref2 = ref1 // why doesn't ARC kick in here? WTF? :-/
