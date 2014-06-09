@@ -250,7 +250,7 @@ case _: // wildcard
     println("whatever")
 }
 
-func hitEvalutation (position: (Double, Double)) -> String {
+func hitEvalutation (withHitPosition position: (Double, Double)) -> String {
     
     let directHit = (x: 0.0, y: 0.0)
     
@@ -264,9 +264,10 @@ func hitEvalutation (position: (Double, Double)) -> String {
     }
 }
 
-hitEvalutation((2.0, 2.2)) // miss
-hitEvalutation((0.0, 0.02)) // direct hit
-hitEvalutation((0.12, 0.0)) // bounce
+// using an external name for the parameter
+hitEvalutation(withHitPosition: (2.0, 2.2)) // miss
+hitEvalutation(withHitPosition: (0.0, 0.02)) // direct hit
+hitEvalutation(withHitPosition: (0.12, 0.0)) // bounce
 
 
 
