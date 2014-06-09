@@ -176,6 +176,29 @@ if resultSome {
     var integerValue: Integer = resultSome!
 }
 
+// further improvement of the cacluation function above
+func getElematryCalcImproved2
+    (type: ElematryCalculationType) -> ((Int, Int) -> Int?) {
+        
+        switch type {
+        case ElematryCalculationType.addition:
+            return {(Int lhs, Int rhs) -> Int in return lhs + rhs}
+        case ElematryCalculationType.subtraction:
+            return {(Int lhs, Int rhs) -> Int in lhs - rhs}
+        case ElematryCalculationType.multiplication:
+            return {(Int lhs, Int rhs) -> Int in return lhs * rhs}
+        case ElematryCalculationType.division:
+            return {(Int lhs, Int rhs) -> Int? in
+                if rhs == 0 {
+                    return nil // division through 0 is not allowed
+                } else {
+                    return (lhs / rhs)
+                }
+            }
+        }
+}
+
+getElematryCalcImproved2(ElematryCalculationType.division)(2, 0)
 
 
 
