@@ -216,7 +216,7 @@ func plus (lhs: Int, rhs: Int) -> Int {
 println(plus.self) // (Function)
 println(plus.dynamicType) // (MetaType)
 
-// Collections
+// Collections. Array
 var shoppinglist = ["Milk", "Eggs"]
 shoppinglist.append("Juice")
 shoppinglist += "Cake"
@@ -229,6 +229,21 @@ println(shoppinglist[0..2]) // same as println(shoppinglist[0...1]
 for (index, value) in enumerate(shoppinglist) {
     println("\(index) - \(value)")
 }
+
+// Collections. Dictionaries
+var shoppingDict: Dictionary<String, Int> = [
+    "Apple": 2,
+    "Banana": 3,
+    "Milk": 1
+]
+
+// got the milk
+shoppingDict["Milk"] // Some 1
+shoppingDict["Milk"] = nil
+shoppingDict["Milk"] // nil
+shoppingDict["Whatever"] // nil
+shoppingDict.count // =2
+
 
 
 
