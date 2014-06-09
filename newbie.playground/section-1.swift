@@ -307,5 +307,11 @@ mathFunctionBinder(*, 3, 3)
 mathFunctionBinder(+, 3, 3)
 mathFunctionBinder(-, 3, 3)
 
+// kinda like a disjoint data type
+enum Barcode {
+    case UPCA(Int, Int, Int)
+    case QR(String)
+}
+
 
 
