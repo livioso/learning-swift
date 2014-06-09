@@ -293,6 +293,7 @@ func roundDownToTens (inout #number: Int) {
 var numberToBeRounded = 15
 roundDownToTens(number: &numberToBeRounded)
 
+func noparamnoreturntype () -> () { }
 
 
 
