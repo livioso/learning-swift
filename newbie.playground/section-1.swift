@@ -200,7 +200,11 @@ func getElematryCalcImproved2
 
 getElematryCalcImproved2(ElematryCalculationType.division)(2, 0)
 
+func vector (pointOne: (x: Int, y: Int), pointTwo: (x: Int, y: Int)) -> (Int, Int) {
+    return (-pointOne.x + pointTwo.x, -pointOne.y + pointTwo.y)
+}
 
+vector((2, 0), (3, 0)) // (1, 0)
 
 
 
