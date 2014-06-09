@@ -154,6 +154,30 @@ typealias 💩 = String
 var 💣:💩 = "😃🔫"
 println(💣)
 
+// in oder to use == we need to say that it must be Equatable
+// return type is T? that's about the same as Maybe in Haskell (?)
+func findFirst <T where T: Equatable> (inContainer: T[], whatToFind: T) -> T? {
+    
+    for i in 0..inContainer.count {
+        if whatToFind == inContainer[i] {
+            return inContainer[i]
+        }
+    }
+    
+    return nil
+}
+
+var resultSome = findFirst([0,2,3,5,7], 3)  // -> Some 3
+var resultNil = findFirst([0,2,3,4,5], 10) // -> nil
+
+if resultSome {
+    // Can't unwrap Optional.None with resultNil!
+    // But unwrap if there is a value to unwrap
+    var integerValue: Integer = resultSome!
+}
+
+
+
 
 
 
