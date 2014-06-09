@@ -206,8 +206,29 @@ func vector (pointOne: (x: Int, y: Int), pointTwo: (x: Int, y: Int)) -> (Int, In
 
 vector((2, 0), (3, 0)) // (1, 0)
 
+let age = 10
+assert(age >= 0, "Age can't be below 0") // otherwise "assertion failed"
 
+func plus (lhs: Int, rhs: Int) -> Int {
+    return lhs + rhs
+}
 
+println(plus.self) // (Function)
+println(plus.dynamicType) // (MetaType)
+
+// Collections
+var shoppinglist = ["Milk", "Eggs"]
+shoppinglist.append("Juice")
+shoppinglist += "Cake"
+shoppinglist.insert("Cheese", atIndex: 0)
+shoppinglist.removeAtIndex(0)
+shoppinglist.removeLast()
+println(shoppinglist[0..2]) // same as println(shoppinglist[0...1]
+
+// iterate over it
+for (index, value) in enumerate(shoppinglist) {
+    println("\(index) - \(value)")
+}
 
 
 
