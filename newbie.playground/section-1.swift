@@ -244,6 +244,31 @@ shoppingDict["Milk"] // nil
 shoppingDict["Whatever"] // nil
 shoppingDict.count // =2
 
+var xyz = 1
+switch xyz {
+case _: // wildcard
+    println("whatever")
+}
+
+func hitEvalutation (position: (Double, Double)) -> String {
+    
+    let directHit = (x: 0.0, y: 0.0)
+    
+    switch position {
+    case (directHit.x...directHit.x + 0.1, directHit.y...directHit.y + 0.1):
+        return "direct hit"
+    case let (x, y) where x <= directHit.x + 0.2 && y <= directHit.y + 0.2:
+        return "bounce"
+    case (_, _):
+        return "miss"
+    }
+}
+
+hitEvalutation((2.0, 2.2)) // miss
+hitEvalutation((0.0, 0.02)) // direct hit
+hitEvalutation((0.12, 0.0)) // bounce
+
+
 
 
 
