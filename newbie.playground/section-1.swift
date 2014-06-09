@@ -269,7 +269,20 @@ hitEvalutation(withHitPosition: (2.0, 2.2)) // miss
 hitEvalutation(withHitPosition: (0.0, 0.02)) // direct hit
 hitEvalutation(withHitPosition: (0.12, 0.0)) // bounce
 
+// # forces user to specify the name of the parameter in 
+// the actual call: this improves readability
+func contains (#char: Character, #inString: String) -> Bool {
+    
+    for each in inString {
+        if each == char {
+            return true
+        }
+    }
+    
+    return false
+}
 
+contains(char: "a", inString: "abc")
 
 
 
