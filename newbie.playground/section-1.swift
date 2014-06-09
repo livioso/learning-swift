@@ -283,6 +283,15 @@ func contains (#char: Character, #inString: String) -> Bool {
 }
 
 contains(char: "a", inString: "abc")
+// still this doesn't work: contains(inString: "abc", char: "a")
+
+// call by reference. so called inout parameter
+func roundDownToTens (inout #number: Int) {
+    number -= number % 10
+}
+
+var numberToBeRounded = 15
+roundDownToTens(number: &numberToBeRounded)
 
 
 
