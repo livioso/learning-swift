@@ -295,5 +295,17 @@ roundDownToTens(number: &numberToBeRounded)
 
 func noparamnoreturntype () -> () { }
 
+var names = ["Livio","Sepp", "Kevin"]
+sort(names, >)
+sort(names, <)
+
+func mathFunctionBinder(functor: (Int, Int) -> Int, lhs: Int, rhs: Int) -> Int{
+    return functor(lhs, rhs)
+}
+
+mathFunctionBinder(*, 3, 3)
+mathFunctionBinder(+, 3, 3)
+mathFunctionBinder(-, 3, 3)
+
 
 
