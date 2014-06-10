@@ -456,3 +456,54 @@ if let graziellaBiancaHusband = graziellaBianca.husband?.name {
 }
 
 
+protocol MediaItem {
+    var name: String { get set }
+}
+
+class Movie: MediaItem {
+    var name: String
+    var actors: String[]
+    
+    init(name: String, actors: String...) {
+        self.name = name
+        self.actors = actors
+    }
+    
+}
+
+class Song: MediaItem {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+
+func printMediaType(media: MediaItem) {
+    if media is Movie {
+        println("Type movie with name \(media.name)")
+    }
+    if media is Song {
+        println("Type song with name \(media.name)")
+    }
+    
+    // downcasting to Movie from MediaItem
+    // (if possible -> otherwise not)
+    if let movie = media as? Movie {
+        println("Actors are: ")
+        println(movie.actors)
+    }
+}
+
+var iCantGetNoSatisfaction: Song =
+    Song(name: "I can't get no satisfaction")
+
+var iRobot: Movie =
+    Movie(name: "iRobot",
+    actors: "Will Smith", "Bruce Greenwood")
+
+printMediaType(iCantGetNoSatisfaction)
+printMediaType(iRobot)
+
+
+
