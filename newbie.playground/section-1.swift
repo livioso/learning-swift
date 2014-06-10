@@ -428,3 +428,21 @@ var ref2: Person = ref1
 
 ref1 = Person(name: "Hans")
 ref2 = ref1 // why doesn't ARC kick in here? WTF? :-/
+
+var justAnumber = 10
+if justAnumber % 2 == 0 {
+    
+}
+
+// optional chaining
+class Wife {
+    var nameOfHusband: String?
+    init(nameOfHusband: String) {
+        self.nameOfHusband = nameOfHusband
+    }
+    init() {}
+}
+var GraziellaBianca = Wife()
+var GraziellaBiancaHusband = GraziellaBianca.nameOfHusband?
+
+
