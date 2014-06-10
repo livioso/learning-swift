@@ -479,6 +479,14 @@ class Song: MediaItem {
     }
 }
 
+// extending the type Song without 
+// changing Song itself
+extension Song {
+    func play() {
+        println("Playing da music now")
+    }
+}
+
 func printMediaType(media: MediaItem) {
     if media is Movie {
         println("Type movie with name \(media.name)")
@@ -493,6 +501,9 @@ func printMediaType(media: MediaItem) {
         println("Actors are: ")
         println(movie.actors)
     }
+    if let song = media as? Song {
+        song.play()
+    }
 }
 
 var iCantGetNoSatisfaction: Song =
@@ -504,6 +515,16 @@ var iRobot: Movie =
 
 printMediaType(iCantGetNoSatisfaction)
 printMediaType(iRobot)
+
+// extension that allows to reverse the String
+extension String {
+    func whatever () -> String {
+        return self + " whaaaatever!!"
+    }
+}
+
+// ^ really useful extension to a String
+"Livio".whatever()
 
 
 
