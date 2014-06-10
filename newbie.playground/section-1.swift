@@ -434,15 +434,25 @@ if justAnumber % 2 == 0 {
     
 }
 
+class Husband {
+    var name: String = ""
+    init(name: String) {
+        self.name = name
+    }
+}
+
 // optional chaining
 class Wife {
-    var nameOfHusband: String?
-    init(nameOfHusband: String) {
-        self.nameOfHusband = nameOfHusband
-    }
-    init() {}
+    var husband: Husband?
 }
-var GraziellaBianca = Wife()
-var GraziellaBiancaHusband = GraziellaBianca.nameOfHusband?
+
+var graziellaBianca = Wife()
+graziellaBianca.husband = Husband(name: "Sepp Blatter")
+
+if let graziellaBiancaHusband = graziellaBianca.husband?.name {
+    println(graziellaBiancaHusband)
+} else {
+    println("noname")
+}
 
 
