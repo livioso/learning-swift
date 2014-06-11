@@ -295,7 +295,7 @@ roundDownToTens(number: &numberToBeRounded)
 
 func noparamnoreturntype () -> () { }
 
-var names = ["Livio","Sepp", "Kevin"]
+var names: String[] = ["Livio","Sepp", "Kevin"]
 sort(names, >)
 sort(names, <)
 
