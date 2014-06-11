@@ -456,8 +456,9 @@ if let graziellaBiancaHusband = graziellaBianca.husband?.name {
 }
 
 
-protocol MediaItem {
+@objc protocol MediaItem {
     var name: String { get set }
+    @optional var description: String { get set }
 }
 
 class Movie: MediaItem {
@@ -525,6 +526,5 @@ extension String {
 
 // ^ really useful extension to a String
 "Livio".whatever()
-
 
 
