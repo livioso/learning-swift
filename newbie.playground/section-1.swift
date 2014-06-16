@@ -527,4 +527,23 @@ extension String {
 // ^ really useful extension to a String
 "Livio".whatever()
 
+func SieveOfEratosthenes(#to: Int) -> Array<Bool> {
+    let primes:Array<Bool> = Array(count: to + 1, repeatedValue: true)
+    primes[0] = false
+    primes[1] = false
+
+    for var i = 2; i*i <= to; i++ {
+        if(primes[i]) {
+            for var j = i; i*j <= to; j++ {
+                primes[i * j] = false
+            }
+        }
+    }
+    
+    return primes
+}
+
+for each in SieveOfEratosthenes(to: 100) {
+    println(each)
+}
 

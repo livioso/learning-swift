@@ -18,4 +18,4 @@ func application(application: UIApplication,
     return true
 }
 
-application()y
+application()
