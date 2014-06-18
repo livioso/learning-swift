@@ -11,15 +11,15 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SimpleGUI" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SimpleGUI" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="36x-yX-Cfl" customClass="ConCatController" customModule="SimpleGUI" customModuleProvider="target">
             <connections>
-                <outlet property="firstName" destination="1vb-aI-Paz" id="WJq-kP-3E4"/>
-                <outlet property="fullName" destination="NBD-0b-4i1" id="X6G-nC-38D"/>
-                <outlet property="secondName" destination="M7J-K0-YzD" id="gNR-Lf-zLv"/>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="firstName" destination="1vb-aI-Paz" id="yal-sk-gDX"/>
+                <outlet property="fullName" destination="NBD-0b-4i1" id="Ajv-bt-aaw"/>
+                <outlet property="secondName" destination="M7J-K0-YzD" id="5Ru-H4-hxw"/>
             </connections>
         </customObject>
-        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="SimpleGUI" id="1Xt-HY-uBw">
@@ -669,11 +669,11 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="SimpleGUI" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="SimpleGUI" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="ConCatController" customModule="SimpleGUI" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="254" height="277"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="254" height="277"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -728,7 +728,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="concatNameButton:" target="Voe-Tx-rLC" id="5BZ-D7-SUx"/>
+                            <action selector="concatNameButton:" target="36x-yX-Cfl" id="vY9-uO-kxh"/>
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1vb-aI-Paz">
