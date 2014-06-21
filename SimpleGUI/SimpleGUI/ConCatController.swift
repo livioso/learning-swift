@@ -18,5 +18,9 @@ class ConCatController: NSObject {
         fullName.stringValue = firstName.stringValue + " " +
         secondName.stringValue
     }
-
+    
+    override func awakeFromNib() {
+        var now: NSDate = NSDate()
+        fullName.stringValue = now.description
+    }
 }
