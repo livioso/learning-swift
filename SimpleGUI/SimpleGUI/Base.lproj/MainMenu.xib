@@ -672,10 +672,10 @@
         <window title="SimpleGUI" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="ConCatController" customModule="SimpleGUI" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="254" height="277"/>
+            <rect key="contentRect" x="335" y="390" width="254" height="282"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="254" height="277"/>
+                <rect key="frame" x="0.0" y="0.0" width="254" height="282"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebl-zh-Ojr">
@@ -741,7 +741,7 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-5" y="343.5"/>
+            <point key="canvasLocation" x="74" y="286"/>
         </window>
     </objects>
     <resources>
