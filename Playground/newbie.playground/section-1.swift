@@ -1,6 +1,8 @@
 // Playground - noun: a place where people can play
 
 import Cocoa
+import SceneKit
+import QuartzCore
 
 var str = "Hello, playground. Please don't crash."
 
@@ -546,4 +548,31 @@ func SieveOfEratosthenes(#to: Int) -> Array<Bool> {
 for each in SieveOfEratosthenes(to: 100) {
     println(each)
 }
+
+var scene: SCNScene = SCNScene()
+
+var cameraNode: SCNNode = SCNNode()
+cameraNode.camera = SCNCamera()
+cameraNode.position = SCNVector3Make(0, 15, 30)
+cameraNode.transform = CATransform3DRotate(cameraNode.transform, 7.0, 1, 0, 0)
+scene.rootNode.addChildNode(cameraNode)
+
+var spotlight: SCNLight = SCNLight()
+spotlight.type = SCNLightTypeSpot
+spotlight.color = NSColor.redColor()
+
+var spotlightNode: SCNNode = SCNNode()
+spotlightNode.light = spotlight
+spotlightNode.position = SCNVector3Make(-2, 1, 0)
+
+cameraNode.addChildNode(spotlightNode)
+
+let boxSide = 15.0
+var box: SCNBox =
+SCNBox(width: boxSide, height: boxSide, length: boxSide, chamferRadius: 0)
+
+var boxNode: SCNNode = SCNNode(geometry: box)
+boxNode.transform = CATransform3DMakeRotation(3, 0, 1, 0)
+
+scene.rootNode.addChildNode(boxNode)
 
