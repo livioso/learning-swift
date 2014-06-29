@@ -549,6 +549,8 @@ for each in SieveOfEratosthenes(to: 100) {
     println(each)
 }
 
+
+// SceneKit
 var scene: SCNScene = SCNScene()
 
 var cameraNode: SCNNode = SCNNode()
@@ -575,4 +577,10 @@ var boxNode: SCNNode = SCNNode(geometry: box)
 boxNode.transform = CATransform3DMakeRotation(3, 0, 1, 0)
 
 scene.rootNode.addChildNode(boxNode)
+
+// JSON
+let data = NSData.dataWithContentsOfFile("/Users/livio/Dropbox/FHNW/SyncMe/SyncMe/subjects.json", options: .DataReadingMappedIfSafe, error: nil)
+
+var error: NSError?
+//let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error) as NSDictionary
 
