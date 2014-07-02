@@ -662,16 +662,16 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Speaker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="Speaker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="SpeakerDelegate" customModule="Speaker" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="347" height="91"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="347" height="91"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noc-y3-PkQ">
+                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noc-y3-PkQ">
                         <rect key="frame" x="20" y="49" width="307" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Read this text..." drawsBackground="YES" id="bhr-co-fco">
                             <font key="font" metaFont="system"/>
@@ -679,21 +679,30 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rh6-fy-Rn3">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rh6-fy-Rn3">
                         <rect key="frame" x="261" y="6" width="39" height="38"/>
                         <buttonCell key="cell" type="round" title="◼︎" bezelStyle="circular" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ke1-Z4-i7o">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="stop:" target="QvC-M9-y7g" id="2BX-fL-H9O"/>
+                        </connections>
                     </button>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H7R-XN-5Aw">
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H7R-XN-5Aw">
                         <rect key="frame" x="295" y="6" width="39" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="jqc-e0-tGg"/>
+                        </constraints>
                         <buttonCell key="cell" type="round" title="►" bezelStyle="circular" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LrB-19-I14">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="start:" target="QvC-M9-y7g" id="pTs-0a-ZvB"/>
+                        </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-Bm-ive">
+                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-Bm-ive">
                         <rect key="frame" x="20" y="49" width="307" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Read this text..." drawsBackground="YES" id="rUt-ec-GKt">
                             <font key="font" metaFont="system"/>
@@ -704,8 +713,35 @@
                             <outlet property="delegate" destination="BDc-1T-jTU" id="dRP-aB-7y4"/>
                         </connections>
                     </textField>
+                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdZ-f3-gGR">
+                        <rect key="frame" x="20" y="49" width="307" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Read this text..." drawsBackground="YES" id="ccT-Px-Ych">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="QvC-M9-y7g" id="ckx-hM-Ywm"/>
+                        </connections>
+                    </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="top" secondItem="wYT-Bm-ive" secondAttribute="bottom" constant="8" symbolic="YES" id="ARb-YS-0Wk"/>
+                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="top" secondItem="Rh6-fy-Rn3" secondAttribute="top" id="Bn5-Ny-fga"/>
+                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="top" secondItem="noc-y3-PkQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Dcz-wQ-hwr"/>
+                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="trailing" secondItem="wYT-Bm-ive" secondAttribute="trailing" id="ITy-j2-ME5"/>
+                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="leading" secondItem="Rh6-fy-Rn3" secondAttribute="trailing" constant="8" symbolic="YES" id="Jd0-z8-srt"/>
+                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="trailing" secondItem="noc-y3-PkQ" secondAttribute="trailing" id="OAm-FM-IdQ"/>
+                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="trailing" secondItem="vdZ-f3-gGR" secondAttribute="trailing" id="SFH-3Y-xkj"/>
+                    <constraint firstAttribute="bottom" secondItem="H7R-XN-5Aw" secondAttribute="bottom" constant="15" id="XTp-vc-Itc"/>
+                    <constraint firstAttribute="trailing" secondItem="H7R-XN-5Aw" secondAttribute="trailing" constant="20" symbolic="YES" id="e9o-AO-tLl"/>
+                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="top" secondItem="vdZ-f3-gGR" secondAttribute="bottom" constant="8" symbolic="YES" id="slC-di-SdG"/>
+                </constraints>
             </view>
+            <connections>
+                <outlet property="testToSpeak" destination="vdZ-f3-gGR" id="YOC-6w-V19"/>
+                <outlet property="textToSpeak" destination="vdZ-f3-gGR" id="weQ-BJ-mAx"/>
+            </connections>
         </window>
         <customObject id="BDc-1T-jTU" userLabel="SpeakerDelegate" customClass="SpeakerDelegate"/>
         <customObject id="ddk-XG-t66"/>

@@ -12,7 +12,7 @@
 		BA3643EE1956D1F60056E0D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3643ED1956D1F60056E0D6 /* Images.xcassets */; };
 		BA3643F11956D1F60056E0D6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3643EF1956D1F60056E0D6 /* MainMenu.xib */; };
 		BA3643FD1956D1F70056E0D6 /* SpeakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3643FC1956D1F70056E0D6 /* SpeakerTests.swift */; };
-		BA3644071956D7050056E0D6 /* SpeakerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3644061956D7050056E0D6 /* SpeakerDelegate.swift */; };
+		BAF64DB119647D90005EB2FE /* SpeakerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3644061956D7050056E0D6 /* SpeakerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,7 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA3643EC1956D1F60056E0D6 /* AppDelegate.swift in Sources */,
-				BA3644071956D7050056E0D6 /* SpeakerDelegate.swift in Sources */,
+				BAF64DB119647D90005EB2FE /* SpeakerDelegate.swift in Sources */,
 				BA3643EA1956D1F60056E0D6 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +331,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Speaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -342,6 +346,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Speaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

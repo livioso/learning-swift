@@ -11,13 +11,12 @@ import Cocoa
 
 class SpeakerDelegate: NSObject {
     
+    @IBOutlet var textToSpeak: NSTextField
     
     @IBAction func start(sender: NSButton) {
-        var msgBox: NSAlert = NSAlert()
-        println("Hallo")
     }
     
     @IBAction func stop(sender: NSButton) {
-        
+        textToSpeak.stringValue = "Hallo"
     }
 }
