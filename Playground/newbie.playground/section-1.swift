@@ -545,7 +545,7 @@ func SieveOfEratosthenes(#to: Int) -> Array<Bool> {
     return primes
 }
 
-for each in SieveOfEratosthenes(to: 100) {
+for each in SieveOfEratosthenes(to: 10) {
     println(each)
 }
 
@@ -583,4 +583,35 @@ let data = NSData.dataWithContentsOfFile("/Users/livio/Dropbox/FHNW/SyncMe/SyncM
 
 var error: NSError?
 //let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error) as NSDictionary
+
+// filter
+let array: Array<Int> = [2, 4, 6, 8, 15]
+let filteredArray = array.filter({ $0 > 10 })
+
+//reduce
+let sum = reduce(array, 0, +)
+
+//reduce to find the min value in the sequence?
+func minOfTwo (lhs: Int, rhs: Int) -> Int {
+    if(rhs > lhs) {
+        return lhs
+    }
+    else {
+        return rhs
+    }
+}
+
+minOfTwo(5,6)
+
+let minA = reduce(array, array[0], minOfTwo)
+let minB = reduce(array, array[0], {lhs, rhs in
+    if(rhs > lhs) {
+        return lhs
+    }
+    else {
+        return rhs
+    }
+})
+
+println(minB)
 
