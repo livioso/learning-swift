@@ -12,7 +12,7 @@
 		BA3643EE1956D1F60056E0D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3643ED1956D1F60056E0D6 /* Images.xcassets */; };
 		BA3643F11956D1F60056E0D6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3643EF1956D1F60056E0D6 /* MainMenu.xib */; };
 		BA3643FD1956D1F70056E0D6 /* SpeakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3643FC1956D1F70056E0D6 /* SpeakerTests.swift */; };
-		BAF64DB119647D90005EB2FE /* SpeakerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3644061956D7050056E0D6 /* SpeakerDelegate.swift */; };
+		BAF64DB119647D90005EB2FE /* SpeakerDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3644061956D7050056E0D6 /* SpeakerDelegate2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 		BA3643F61956D1F70056E0D6 /* SpeakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3643FB1956D1F70056E0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3643FC1956D1F70056E0D6 /* SpeakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerTests.swift; sourceTree = "<group>"; };
-		BA3644061956D7050056E0D6 /* SpeakerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerDelegate.swift; sourceTree = "<group>"; };
+		BA3644061956D7050056E0D6 /* SpeakerDelegate2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerDelegate2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				BA3643EB1956D1F60056E0D6 /* AppDelegate.swift */,
 				BA3643ED1956D1F60056E0D6 /* Images.xcassets */,
 				BA3643EF1956D1F60056E0D6 /* MainMenu.xib */,
-				BA3644061956D7050056E0D6 /* SpeakerDelegate.swift */,
+				BA3644061956D7050056E0D6 /* SpeakerDelegate2.swift */,
 				BA3643E71956D1F60056E0D6 /* Supporting Files */,
 			);
 			path = Speaker;
@@ -212,7 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA3643EC1956D1F60056E0D6 /* AppDelegate.swift in Sources */,
-				BAF64DB119647D90005EB2FE /* SpeakerDelegate.swift in Sources */,
+				BAF64DB119647D90005EB2FE /* SpeakerDelegate2.swift in Sources */,
 				BA3643EA1956D1F60056E0D6 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

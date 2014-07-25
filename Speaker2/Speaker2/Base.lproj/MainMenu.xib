@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6185.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -10,16 +10,25 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Speaker2" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="5L8-Ce-ZXc" customClass="Speaker" customModule="Speaker2" customModuleProvider="target">
+            <connections>
+                <outlet property="textToSpeech" destination="8LI-ro-GJk" id="J9D-aF-OAh"/>
+            </connections>
+        </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="Speaker" id="1Xt-HY-uBw">
+                <menuItem title="Speaker2" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Speaker" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="Speaker2" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About Speaker" id="5kV-Vb-QxS">
+                            <menuItem title="About Speaker2" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
@@ -33,7 +42,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide Speaker" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide Speaker2" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -51,7 +60,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit Speaker" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit Speaker2" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -652,7 +661,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
-                            <menuItem title="Speaker Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                            <menuItem title="Speaker2 Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>
@@ -662,89 +671,38 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Speaker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="SpeakerDelegate" customModule="Speaker" customModuleProvider="target">
+        <window title="Speaker2" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="347" height="91"/>
+            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="347" height="91"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noc-y3-PkQ">
-                        <rect key="frame" x="20" y="49" width="307" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Read this text..." drawsBackground="YES" id="bhr-co-fco">
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8LI-ro-GJk">
+                        <rect key="frame" x="18" y="318" width="442" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="k80-HF-Vdy">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <action selector="toSpeechButton:" target="5L8-Ce-ZXc" id="7nx-Dc-pk0"/>
+                        </connections>
                     </textField>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rh6-fy-Rn3">
-                        <rect key="frame" x="261" y="6" width="39" height="38"/>
-                        <buttonCell key="cell" type="round" title="◼︎" bezelStyle="circular" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ke1-Z4-i7o">
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e9y-O7-3ya">
+                        <rect key="frame" x="12" y="282" width="82" height="32"/>
+                        <buttonCell key="cell" type="push" title="Play" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NwN-kK-62K">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="stop:" target="QvC-M9-y7g" id="mHM-I7-OqY"/>
-                        </connections>
-                    </button>
-                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-Bm-ive">
-                        <rect key="frame" x="20" y="49" width="307" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Read this text..." drawsBackground="YES" id="rUt-ec-GKt">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                        <connections>
-                            <outlet property="delegate" destination="BDc-1T-jTU" id="dRP-aB-7y4"/>
-                        </connections>
-                    </textField>
-                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdZ-f3-gGR">
-                        <rect key="frame" x="20" y="49" width="307" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Read this text..." drawsBackground="YES" id="ccT-Px-Ych">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                        <connections>
-                            <outlet property="delegate" destination="QvC-M9-y7g" id="ckx-hM-Ywm"/>
-                        </connections>
-                    </textField>
-                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="H7R-XN-5Aw">
-                        <rect key="frame" x="295" y="6" width="39" height="38"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="26" id="jqc-e0-tGg"/>
-                        </constraints>
-                        <buttonCell key="cell" type="round" title="►" bezelStyle="circular" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LrB-19-I14">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="start:" target="QvC-M9-y7g" id="82y-eX-HlX"/>
+                            <action selector="toSpeechButton:" target="5L8-Ce-ZXc" id="vth-Z1-1tf"/>
                         </connections>
                     </button>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="top" secondItem="wYT-Bm-ive" secondAttribute="bottom" constant="8" symbolic="YES" id="ARb-YS-0Wk"/>
-                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="top" secondItem="Rh6-fy-Rn3" secondAttribute="top" id="Bn5-Ny-fga"/>
-                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="top" secondItem="noc-y3-PkQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Dcz-wQ-hwr"/>
-                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="trailing" secondItem="wYT-Bm-ive" secondAttribute="trailing" id="ITy-j2-ME5"/>
-                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="leading" secondItem="Rh6-fy-Rn3" secondAttribute="trailing" constant="8" symbolic="YES" id="Jd0-z8-srt"/>
-                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="trailing" secondItem="noc-y3-PkQ" secondAttribute="trailing" id="OAm-FM-IdQ"/>
-                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="trailing" secondItem="vdZ-f3-gGR" secondAttribute="trailing" id="SFH-3Y-xkj"/>
-                    <constraint firstAttribute="bottom" secondItem="H7R-XN-5Aw" secondAttribute="bottom" constant="15" id="XTp-vc-Itc"/>
-                    <constraint firstAttribute="trailing" secondItem="H7R-XN-5Aw" secondAttribute="trailing" constant="20" symbolic="YES" id="e9o-AO-tLl"/>
-                    <constraint firstItem="H7R-XN-5Aw" firstAttribute="top" secondItem="vdZ-f3-gGR" secondAttribute="bottom" constant="8" symbolic="YES" id="slC-di-SdG"/>
-                </constraints>
             </view>
-            <connections>
-                <outlet property="testToSpeak" destination="vdZ-f3-gGR" id="YOC-6w-V19"/>
-                <outlet property="textToSpeak" destination="vdZ-f3-gGR" id="weQ-BJ-mAx"/>
-            </connections>
-            <point key="canvasLocation" x="10.5" y="-126.5"/>
         </window>
-        <customObject id="BDc-1T-jTU" userLabel="SpeakerDelegate" customClass="SpeakerDelegate"/>
-        <customObject id="ddk-XG-t66"/>
     </objects>
 </document>

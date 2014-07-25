@@ -9,14 +9,14 @@
 import Foundation
 import Cocoa
 
-class SpeakerDelegate: NSObject {
+class SpeakerDelegate: NSObject, NSApplicationDelegate {
     
-    @IBOutlet var textToSpeak: NSTextField
+    @IBOutlet var textToSpeak: NSTextField? = NSTextField()
     
     @IBAction func start(sender: NSButton) {
     }
     
     @IBAction func stop(sender: NSButton) {
-        textToSpeak.stringValue = "Hallo"
+        textToSpeak!.stringValue = "Hallo"
     }
 }
