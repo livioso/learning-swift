@@ -62,6 +62,9 @@
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="x10-vh-lOv" name="value" keyPath="objectValue.makeModel" id="vIs-sU-AYV"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <connections>
@@ -92,6 +95,9 @@
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        <connections>
+                                                            <binding destination="6lw-Nc-cBc" name="value" keyPath="selection" id="7Yz-zx-IvY"/>
+                                                        </connections>
                                                     </textFieldCell>
                                                 </textField>
                                             </prototypeCellViews>
@@ -120,6 +126,10 @@
                                             </prototypeCellViews>
                                         </tableColumn>
                                     </tableColumns>
+                                    <connections>
+                                        <binding destination="6lw-Nc-cBc" name="content" keyPath="arrangedObjects" id="3hV-FF-Qnp"/>
+                                        <binding destination="6lw-Nc-cBc" name="selectionIndexes" keyPath="arrangedObjects" previousBinding="3hV-FF-Qnp" id="Mm1-yc-ryE"/>
+                                    </connections>
                                 </tableView>
                             </subviews>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
