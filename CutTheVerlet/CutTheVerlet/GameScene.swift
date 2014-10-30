@@ -13,7 +13,8 @@ import AVFoundation
 
 class GameScene: SKScene {
     
-    
+    private var crocodile: SKSpriteNode!
+    private var prize: SKSpriteNode!
 
     override func didMoveToView(view: SKView) {
         
@@ -42,8 +43,6 @@ class GameScene: SKScene {
         
 
     }
-    
-    //MARK: Rope methods
     
     private func setUpRopes() {
         let background = SKSpriteNode(imageNamed: BackgroundImage)
