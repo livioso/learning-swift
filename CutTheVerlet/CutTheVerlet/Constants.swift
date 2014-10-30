@@ -41,3 +41,6 @@ struct Category {
     static let Prize: UInt32 = 8
 }
 
+let PrizeIsDynamicsOnStart = true
+let CanCutMultipleRopesAtOnce = false
+
