@@ -61,11 +61,20 @@ class GameScene: SKScene {
         addChild(water)
     }
     
-    //MARK: Croc methods
-    
     private func setUpCrocodile() {
+        crocodile = SKSpriteNode(imageNamed: CrocMouthClosedImage)
+        crocodile.position = CGPointMake(size.width * 0.75, size.height * 0.312)
+        crocodile.zPosition = Layer.Crocodile
         
-
+        crocodile.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: CrocMaskImage), size: crocodile.size)
+        crocodile.physicsBody?.categoryBitMask = Category.Crocodile
+        crocodile.physicsBody?.collisionBitMask = 0
+        crocodile.physicsBody?.contactTestBitMask = Category.Prize
+        crocodile.physicsBody?.dynamic = false
+        
+        addChild(crocodile)
+        
+        animateCrocodile()
     }
     
     private func animateCrocodile() {
