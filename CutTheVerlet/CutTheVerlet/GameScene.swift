@@ -78,8 +78,19 @@ class GameScene: SKScene {
     }
     
     private func animateCrocodile() {
+        let frames = [
+            SKTexture(imageNamed: CrocMouthClosedImage),
+            SKTexture(imageNamed: CrocMouthOpenImage),
+        ]
         
-
+        let duration = 2.0 + drand48() * 2.0
+        
+        let move = SKAction.animateWithTextures(frames, timePerFrame:0.25)
+        let wait = SKAction.waitForDuration(duration)
+        let rest = SKAction.setTexture(frames[0])
+        let sequence = SKAction.sequence([wait, move, wait, rest])
+        
+        crocodile.runAction(SKAction.repeatActionForever(sequence))
     }
     
     private func runNomNomAnimationWithDelay(delay: NSTimeInterval) {
