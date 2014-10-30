@@ -26,7 +26,18 @@ let NomNomSound = "NomNom.caf"
 
 let RopeDataFile = "RopeData.plist"
 
+struct Layer {
+    static let Background: CGFloat = 0
+    static let Crocodile: CGFloat = 1
+    static let Rope: CGFloat = 1
+    static let Prize: CGFloat = 2
+    static let Foreground: CGFloat = 3
+}
 
-
-//MARK: game configuration
+struct Category {
+    static let Crocodile: UInt32 = 1
+    static let RopeHolder: UInt32 = 2
+    static let Rope: UInt32 = 4
+    static let Prize: UInt32 = 8
+}
 
