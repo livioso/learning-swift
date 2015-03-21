@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA632A39198307A700B7D0D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA632A38198307A700B7D0D6 /* main.swift */; };
+		BA632A3B198307A700B7D0D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA632A3A198307A700B7D0D6 /* AppDelegate.swift */; };
+		BA632A3D198307A700B7D0D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA632A3C198307A700B7D0D6 /* Images.xcassets */; };
+		BA632A40198307A700B7D0D6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA632A3E198307A700B7D0D6 /* MainMenu.xib */; };
+		BA632A4C198307A700B7D0D6 /* Speaker2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA632A4B198307A700B7D0D6 /* Speaker2Tests.swift */; };
+		BA632A56198307D000B7D0D6 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA632A55198307D000B7D0D6 /* Speaker.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA632A46198307A700B7D0D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA632A2B198307A700B7D0D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA632A32198307A700B7D0D6;
+			remoteInfo = Speaker2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA632A33198307A700B7D0D6 /* Speaker2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speaker2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA632A37198307A700B7D0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA632A38198307A700B7D0D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BA632A3A198307A700B7D0D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA632A3C198307A700B7D0D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA632A3F198307A700B7D0D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BA632A45198307A700B7D0D6 /* Speaker2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Speaker2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA632A4A198307A700B7D0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA632A4B198307A700B7D0D6 /* Speaker2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker2Tests.swift; sourceTree = "<group>"; };
+		BA632A55198307D000B7D0D6 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA632A30198307A700B7D0D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA632A42198307A700B7D0D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA632A2A198307A700B7D0D6 = {
+			isa = PBXGroup;
+			children = (
+				BA632A35198307A700B7D0D6 /* Speaker2 */,
+				BA632A48198307A700B7D0D6 /* Speaker2Tests */,
+				BA632A34198307A700B7D0D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA632A34198307A700B7D0D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA632A33198307A700B7D0D6 /* Speaker2.app */,
+				BA632A45198307A700B7D0D6 /* Speaker2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA632A35198307A700B7D0D6 /* Speaker2 */ = {
+			isa = PBXGroup;
+			children = (
+				BA632A55198307D000B7D0D6 /* Speaker.swift */,
+				BA632A3A198307A700B7D0D6 /* AppDelegate.swift */,
+				BA632A3C198307A700B7D0D6 /* Images.xcassets */,
+				BA632A3E198307A700B7D0D6 /* MainMenu.xib */,
+				BA632A36198307A700B7D0D6 /* Supporting Files */,
+			);
+			path = Speaker2;
+			sourceTree = "<group>";
+		};
+		BA632A36198307A700B7D0D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA632A37198307A700B7D0D6 /* Info.plist */,
+				BA632A38198307A700B7D0D6 /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA632A48198307A700B7D0D6 /* Speaker2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BA632A4B198307A700B7D0D6 /* Speaker2Tests.swift */,
+				BA632A49198307A700B7D0D6 /* Supporting Files */,
+			);
+			path = Speaker2Tests;
+			sourceTree = "<group>";
+		};
+		BA632A49198307A700B7D0D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA632A4A198307A700B7D0D6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA632A32198307A700B7D0D6 /* Speaker2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA632A4F198307A700B7D0D6 /* Build configuration list for PBXNativeTarget "Speaker2" */;
+			buildPhases = (
+				BA632A2F198307A700B7D0D6 /* Sources */,
+				BA632A30198307A700B7D0D6 /* Frameworks */,
+				BA632A31198307A700B7D0D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Speaker2;
+			productName = Speaker2;
+			productReference = BA632A33198307A700B7D0D6 /* Speaker2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA632A44198307A700B7D0D6 /* Speaker2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA632A52198307A700B7D0D6 /* Build configuration list for PBXNativeTarget "Speaker2Tests" */;
+			buildPhases = (
+				BA632A41198307A700B7D0D6 /* Sources */,
+				BA632A42198307A700B7D0D6 /* Frameworks */,
+				BA632A43198307A700B7D0D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA632A47198307A700B7D0D6 /* PBXTargetDependency */,
+			);
+			name = Speaker2Tests;
+			productName = Speaker2Tests;
+			productReference = BA632A45198307A700B7D0D6 /* Speaker2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA632A2B198307A700B7D0D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Livio Bieri";
+				TargetAttributes = {
+					BA632A32198307A700B7D0D6 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					BA632A44198307A700B7D0D6 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = BA632A32198307A700B7D0D6;
+					};
+				};
+			};
+			buildConfigurationList = BA632A2E198307A700B7D0D6 /* Build configuration list for PBXProject "Speaker2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA632A2A198307A700B7D0D6;
+			productRefGroup = BA632A34198307A700B7D0D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA632A32198307A700B7D0D6 /* Speaker2 */,
+				BA632A44198307A700B7D0D6 /* Speaker2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA632A31198307A700B7D0D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA632A3D198307A700B7D0D6 /* Images.xcassets in Resources */,
+				BA632A40198307A700B7D0D6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA632A43198307A700B7D0D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA632A2F198307A700B7D0D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA632A56198307D000B7D0D6 /* Speaker.swift in Sources */,
+				BA632A3B198307A700B7D0D6 /* AppDelegate.swift in Sources */,
+				BA632A39198307A700B7D0D6 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA632A41198307A700B7D0D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA632A4C198307A700B7D0D6 /* Speaker2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA632A47198307A700B7D0D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA632A32198307A700B7D0D6 /* Speaker2 */;
+			targetProxy = BA632A46198307A700B7D0D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA632A3E198307A700B7D0D6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA632A3F198307A700B7D0D6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA632A4D198307A700B7D0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA632A4E198307A700B7D0D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BA632A50198307A700B7D0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Speaker2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BA632A51198307A700B7D0D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Speaker2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BA632A53198307A700B7D0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Speaker2.app/Contents/MacOS/Speaker2";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Speaker2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		BA632A54198307A700B7D0D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Speaker2.app/Contents/MacOS/Speaker2";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Speaker2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA632A2E198307A700B7D0D6 /* Build configuration list for PBXProject "Speaker2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA632A4D198307A700B7D0D6 /* Debug */,
+				BA632A4E198307A700B7D0D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA632A4F198307A700B7D0D6 /* Build configuration list for PBXNativeTarget "Speaker2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA632A50198307A700B7D0D6 /* Debug */,
+				BA632A51198307A700B7D0D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BA632A52198307A700B7D0D6 /* Build configuration list for PBXNativeTarget "Speaker2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA632A53198307A700B7D0D6 /* Debug */,
+				BA632A54198307A700B7D0D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA632A2B198307A700B7D0D6 /* Project object */;
+}
