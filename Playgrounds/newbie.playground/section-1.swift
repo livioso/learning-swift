@@ -8,11 +8,11 @@ var str = "Hello, playground. Please don't crash."
 
 var strLooped = ""
 for each:Character in str {
-    strLooped += each
+    strLooped.append(each)
 }
 
 var sumZeroToTen = 0;
-for i in 0..10 {
+for i in 0...10 {
     sumZeroToTen += i
 }
 
@@ -158,9 +158,9 @@ println(💣)
 
 // in oder to use == we need to say that it must be Equatable
 // return type is T? that's about the same as Maybe in Haskell (?)
-func findFirst <T where T: Equatable> (inContainer: T[], whatToFind: T) -> T? {
+func findFirst <T where T: Equatable> (inContainer: [T], whatToFind: T) -> T? {
 
-    for i in 0..inContainer.count {
+    for i in 0...inContainer.count - 1 {
         if whatToFind == inContainer[i] {
             return inContainer[i]
         }
@@ -172,10 +172,10 @@ func findFirst <T where T: Equatable> (inContainer: T[], whatToFind: T) -> T? {
 var resultSome = findFirst([0,2,3,5,7], 3)  // -> Some 3
 var resultNil = findFirst([0,2,3,4,5], 10) // -> nil
 
-if resultSome {
+if (resultSome != nil) {
     // Can't unwrap Optional.None with resultNil!
     // But unwrap if there is a value to unwrap
-    var integerValue: Integer = resultSome!
+    var integerValue: Int = resultSome!
 }
 
 // further improvement of the cacluation function above
@@ -221,11 +221,11 @@ println(plus.dynamicType) // (MetaType)
 // Collections. Array
 var shoppinglist = ["Milk", "Eggs"]
 shoppinglist.append("Juice")
-shoppinglist += "Cake"
+shoppinglist.append("Cake")
 shoppinglist.insert("Cheese", atIndex: 0)
 shoppinglist.removeAtIndex(0)
 shoppinglist.removeLast()
-println(shoppinglist[0..2]) // same as println(shoppinglist[0...1]
+println(shoppinglist[0...2]) // same as println(shoppinglist[0...1]
 
 // iterate over it
 for (index, value) in enumerate(shoppinglist) {
@@ -297,9 +297,9 @@ roundDownToTens(number: &numberToBeRounded)
 
 func noparamnoreturntype () -> () { }
 
-var names: String[] = ["Livio","Sepp", "Kevin"]
-sort(names, >)
-sort(names, <)
+var names: [String] = ["Livio","Sepp", "Kevin"]
+sort(&names, >)
+sort(&names, <)
 
 func mathFunctionBinder(functor: (Int, Int) -> Int, lhs: Int, rhs: Int) -> Int{
     return functor(lhs, rhs)
@@ -334,7 +334,7 @@ if a === b {
 }
 
 struct Marks {
-    var marks: Double[] = []
+    var marks: [Double] = []
 
     // computed property
     // when ever the value is
@@ -364,9 +364,9 @@ enum TraficLight:String {
 
 var traficLight: TraficLight = .Green
 
-for _ in 0..4 {
+for _ in 0...4 {
     traficLight.nextState()
-    println(traficLight.toRaw())
+    println(traficLight.rawValue)
 }
 
 protocol Vehicle {
@@ -390,7 +390,7 @@ class Bicyle: Vehicle {
         return 1
     }
 
-    @final func sound () {
+    final func sound () {
         println("Pew, pew")
     }
 }
@@ -460,12 +460,12 @@ if let graziellaBiancaHusband = graziellaBianca.husband?.name {
 
 @objc protocol MediaItem {
     var name: String { get set }
-    @optional var description: String { get set }
+    optional var description: String { get set }
 }
 
 class Movie: MediaItem {
     var name: String
-    var actors: String[]
+    var actors: [String]
 
     init(name: String, actors: String...) {
         self.name = name
@@ -530,7 +530,8 @@ extension String {
 "Livio".whatever()
 
 func SieveOfEratosthenes(#to: Int) -> Array<Bool> {
-    let primes:Array<Bool> = Array(count: to + 1, repeatedValue: true)
+    var primes: [Bool] = Array(count: to + 1, repeatedValue: true)
+  
     primes[0] = false
     primes[1] = false
 
@@ -548,41 +549,6 @@ func SieveOfEratosthenes(#to: Int) -> Array<Bool> {
 for each in SieveOfEratosthenes(to: 10) {
     println(each)
 }
-
-
-// SceneKit
-var scene: SCNScene = SCNScene()
-
-var cameraNode: SCNNode = SCNNode()
-cameraNode.camera = SCNCamera()
-cameraNode.position = SCNVector3Make(0, 15, 30)
-cameraNode.transform = CATransform3DRotate(cameraNode.transform, 7.0, 1, 0, 0)
-scene.rootNode.addChildNode(cameraNode)
-
-var spotlight: SCNLight = SCNLight()
-spotlight.type = SCNLightTypeSpot
-spotlight.color = NSColor.redColor()
-
-var spotlightNode: SCNNode = SCNNode()
-spotlightNode.light = spotlight
-spotlightNode.position = SCNVector3Make(-2, 1, 0)
-
-cameraNode.addChildNode(spotlightNode)
-
-let boxSide = 15.0
-var box: SCNBox =
-SCNBox(width: boxSide, height: boxSide, length: boxSide, chamferRadius: 0)
-
-var boxNode: SCNNode = SCNNode(geometry: box)
-boxNode.transform = CATransform3DMakeRotation(3, 0, 1, 0)
-
-scene.rootNode.addChildNode(boxNode)
-
-// JSON
-let data = NSData.dataWithContentsOfFile("/Users/livio/Dropbox/FHNW/SyncMe/SyncMe/subjects.json", options: .DataReadingMappedIfSafe, error: nil)
-
-var error: NSError?
-//let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error) as NSDictionary
 
 // filter
 let array: Array<Int> = [2, 4, 6, 8, 15]
