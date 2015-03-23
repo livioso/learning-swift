@@ -531,7 +531,7 @@ extension String {
 
 func SieveOfEratosthenes(#to: Int) -> Array<Bool> {
     var primes: [Bool] = Array(count: to + 1, repeatedValue: true)
-  
+
     primes[0] = false
     primes[1] = false
 
