@@ -35,9 +35,9 @@ func donkey (name:String) {
 donkey("Sepp Blatter")
 
 func donkeys (names: String...) {
-    
+
     println(String(names.count) + " donkeys in array names")
-    
+
     for name in names {
         println(name + " is a big donkey!")
     }
@@ -96,7 +96,7 @@ enum CalculationResult {
 
 func getElematryCalcImproved
     (type: ElematryCalculationType) -> ((Int, Int) -> CalculationResult) {
-    
+
     switch type {
     case ElematryCalculationType.addition:
         return {(Int lhs, Int rhs) -> CalculationResult in
@@ -136,11 +136,11 @@ protocol AbsoluteValue {
 extension Double: AbsoluteValue {
     func abs() -> Double{
         var absValue = self
-        
+
         if(absValue < 0) {
             absValue = -absValue
         }
-        
+
         return absValue
     }
 }
@@ -159,13 +159,13 @@ println(💣)
 // in oder to use == we need to say that it must be Equatable
 // return type is T? that's about the same as Maybe in Haskell (?)
 func findFirst <T where T: Equatable> (inContainer: T[], whatToFind: T) -> T? {
-    
+
     for i in 0..inContainer.count {
         if whatToFind == inContainer[i] {
             return inContainer[i]
         }
     }
-    
+
     return nil
 }
 
@@ -181,7 +181,7 @@ if resultSome {
 // further improvement of the cacluation function above
 func getElematryCalcImproved2
     (type: ElematryCalculationType) -> ((Int, Int) -> Int?) {
-        
+
         switch type {
         case ElematryCalculationType.addition:
             return {(Int lhs, Int rhs) -> Int in return lhs + rhs}
@@ -253,9 +253,9 @@ case _: // wildcard
 }
 
 func hitEvalutation (withHitPosition position: (Double, Double)) -> String {
-    
+
     let directHit = (x: 0.0, y: 0.0)
-    
+
     switch position {
     case (directHit.x...directHit.x + 0.1, directHit.y...directHit.y + 0.1):
         return "direct hit"
@@ -271,16 +271,16 @@ hitEvalutation(withHitPosition: (2.0, 2.2)) // miss
 hitEvalutation(withHitPosition: (0.0, 0.02)) // direct hit
 hitEvalutation(withHitPosition: (0.12, 0.0)) // bounce
 
-// # forces user to specify the name of the parameter in 
+// # forces user to specify the name of the parameter in
 // the actual call: this improves readability
 func contains (#char: Character, #inString: String) -> Bool {
-    
+
     for each in inString {
         if each == char {
             return true
         }
     }
-    
+
     return false
 }
 
@@ -335,9 +335,9 @@ if a === b {
 
 struct Marks {
     var marks: Double[] = []
-    
-    // computed property 
-    // when ever the value is 
+
+    // computed property
+    // when ever the value is
     // requested the average is cacluated
     var average: Double {
     get {
@@ -352,7 +352,7 @@ struct Marks {
 
 enum TraficLight:String {
     case Red = "Red", Green = "Green", Yellow = "Yellow"
-    
+
     mutating func nextState() {
         switch self {
         case Red: self = .Green
@@ -376,20 +376,20 @@ protocol Vehicle {
 
 class Bicyle: Vehicle {
     var currentPassengerNumber: Int = 0
-    
+
     convenience init() {
         // must call a designated init
         self.init(passenger: 1)
     }
-    
+
     init(passenger: Int) {
         currentPassengerNumber = passenger
     }
-    
+
     func maxPassengerNumber() -> Int {
         return 1
     }
-    
+
     @final func sound () {
         println("Pew, pew")
     }
@@ -401,8 +401,8 @@ class MotorBicyle: Bicyle, Vehicle {
     override func maxPassengerNumber() -> Int {
         return 2
     }
-    
-    // error: instance method overrides 
+
+    // error: instance method overrides
     // a 'final' instance method
     // override func sound () {
     //    println("Brum, Brum")
@@ -419,7 +419,7 @@ class Person {
         println("Person init " + name)
         self.name = name
     }
-    
+
     deinit {
       println("Person deinit " + self.name)
     }
@@ -433,7 +433,7 @@ ref2 = ref1 // why doesn't ARC kick in here? WTF? :-/
 
 var justAnumber = 10
 if justAnumber % 2 == 0 {
-    
+
 }
 
 class Husband {
@@ -466,23 +466,23 @@ if let graziellaBiancaHusband = graziellaBianca.husband?.name {
 class Movie: MediaItem {
     var name: String
     var actors: String[]
-    
+
     init(name: String, actors: String...) {
         self.name = name
         self.actors = actors
     }
-    
+
 }
 
 class Song: MediaItem {
     var name: String
-    
+
     init(name: String) {
         self.name = name
     }
 }
 
-// extending the type Song without 
+// extending the type Song without
 // changing Song itself
 extension Song {
     func play() {
@@ -497,7 +497,7 @@ func printMediaType(media: MediaItem) {
     if media is Song {
         println("Type song with name \(media.name)")
     }
-    
+
     // downcasting to Movie from MediaItem
     // (if possible -> otherwise not)
     if let movie = media as? Movie {
@@ -541,7 +541,7 @@ func SieveOfEratosthenes(#to: Int) -> Array<Bool> {
             }
         }
     }
-    
+
     return primes
 }
 
