@@ -33,9 +33,20 @@ progressCircle.lineWidth = 8;
 
 circle.layer.addSublayer(progressCircle);
 
+let label = CATextLayer()
+label.frame = CGRectMake(
+  circle.bounds.width / 2,
+  circle.bounds.width / 2,
+  100, 50);
+
+label.foregroundColor = UIColor.redColor().CGColor
+label.string = "12:30"
+
+circle.layer.addSublayer(label)
+
 // example situations
 
-progressCircle.strokeEnd = 0.6;
+progressCircle.strokeEnd = 0.5;
 circle // 22% percentage of pomodoro
 
 progressCircle.strokeEnd = 0.83;
