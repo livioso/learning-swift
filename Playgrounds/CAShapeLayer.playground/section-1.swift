@@ -46,14 +46,14 @@ circle.layer.addSublayer(label)
 
 var buttonStartStop = CAShapeLayer()
 buttonStartStop.fillColor = UIColor.redColor().CGColor
-buttonStartStop.lineWidth = 8
 
 var squarePath = UIBezierPath(
   rect: CGRectMake(
     circle.bounds.width / 2 - 20,
-    circle.bounds.width / 2 + 50, 40, 40))
+    circle.bounds.width / 2 + 45, 40, 40))
 
 buttonStartStop.path = squarePath.CGPath
+
 
 circle.layer.addSublayer(buttonStartStop)
 
@@ -63,7 +63,7 @@ circle.layer.addSublayer(buttonStartStop)
 progressCircle.strokeEnd = 1
 circle // 22% percentage of pomodoro
 
-progressCircle.strokeEnd = 0.83
+progressCircle.strokeEnd = 0.5
 circle // 83% percentage of pomodoro
 
 progressCircle.strokeEnd = 1
