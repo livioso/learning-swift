@@ -156,6 +156,7 @@
 		BA658CB21ABD7AD3008D5D79 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Livio Bieri";
 				TargetAttributes = {
@@ -407,6 +408,7 @@
 				BA658CDB1ABD7AD3008D5D79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA658CDC1ABD7AD3008D5D79 /* Build configuration list for PBXNativeTarget "cs193p-CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +417,7 @@
 				BA658CDE1ABD7AD3008D5D79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
