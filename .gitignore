@@ -1,5 +1,5 @@
 *.xctimeline
-
+.idea/
 # Xcode
 #
 build/

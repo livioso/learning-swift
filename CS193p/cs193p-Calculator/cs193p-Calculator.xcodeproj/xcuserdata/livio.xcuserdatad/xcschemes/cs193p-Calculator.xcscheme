@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BA658CB91ABD7AD3008D5D79"
-               BuildableName = "cs193p-Calculator.app"
+               BuildableName = "cs193p-Calculator"
                BlueprintName = "cs193p-Calculator"
                ReferencedContainer = "container:cs193p-Calculator.xcodeproj">
             </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BA658CB91ABD7AD3008D5D79"
-            BuildableName = "cs193p-Calculator.app"
+            BuildableName = "cs193p-Calculator"
             BlueprintName = "cs193p-Calculator"
             ReferencedContainer = "container:cs193p-Calculator.xcodeproj">
          </BuildableReference>
