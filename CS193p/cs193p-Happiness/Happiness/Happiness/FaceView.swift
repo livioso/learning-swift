@@ -8,10 +8,14 @@
 
 import UIKit
 
+@IBDesignable
 class FaceView: UIView {
 
+    @IBInspectable
     var lineWidth: CGFloat = 3 {didSet {setNeedsDisplay() }}
+    @IBInspectable
     var color: UIColor = UIColor.blueColor() {didSet {setNeedsDisplay() }}
+    @IBInspectable
     var faceScale: CGFloat = 0.9 { didSet {setNeedsDisplay() }}
 
     var faceCenter: CGPoint {

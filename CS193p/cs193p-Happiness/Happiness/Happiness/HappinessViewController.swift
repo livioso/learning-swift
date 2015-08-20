@@ -9,5 +9,14 @@
 import UIKit
 
 class HappinessViewController: UIViewController {
+    var happines: Int = 50 { // very sad = 0, super happy = 100
+        didSet {
+            happines = min(max(happines, 0), 100)
+            print("Happines = \(happines)")
+            updateUI()
+        }
+    }
 
+    func updateUI() {
+    }
 }
