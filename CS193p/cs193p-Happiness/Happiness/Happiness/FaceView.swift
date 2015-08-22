@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FaceViewDataSource: class {
+    func smilenesForFaceView(sender: FaceView) -> Double?
+}
+
 @IBDesignable
 class FaceView: UIView {
 
@@ -17,6 +21,8 @@ class FaceView: UIView {
     var color: UIColor = UIColor.blueColor() {didSet {setNeedsDisplay() }}
     @IBInspectable
     var faceScale: CGFloat = 0.9 { didSet {setNeedsDisplay() }}
+
+    weak var dataSource: FaceViewDataSource?
 
     var faceCenter: CGPoint {
         return convertPoint(center, fromView: superview)
@@ -83,7 +89,7 @@ class FaceView: UIView {
 
         bezierPathForEye(.Left).stroke()
         bezierPathForEye(.Right).stroke()
-        let smilines   = 0.4
+        let smilines = dataSource?.smilenesForFaceView(self) ?? 0.0
         let smilePath = bezierPathForSmile(smilines)
         smilePath.stroke()
     }

@@ -40,6 +40,9 @@
                             <constraint firstAttribute="bottom" secondItem="O4O-rx-k8c" secondAttribute="bottom" constant="20" symbolic="YES" id="qUe-8Z-Y3q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="O4O-rx-k8c" id="c7k-sI-0di"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPX-v8-2BF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
