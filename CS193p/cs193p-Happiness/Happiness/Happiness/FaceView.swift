@@ -20,16 +20,23 @@ class FaceView: UIView {
     @IBInspectable
     var color: UIColor = UIColor.blueColor() {didSet {setNeedsDisplay() }}
     @IBInspectable
-    var faceScale: CGFloat = 0.9 { didSet {setNeedsDisplay() }}
+    var scale: CGFloat = 0.9 { didSet {setNeedsDisplay() }}
 
     weak var dataSource: FaceViewDataSource?
+
+    func scale(gesture: UIPinchGestureRecognizer) {
+        if gesture.state == .Changed {
+            scale *= gesture.scale
+            gesture.scale = 1
+        }
+    }
 
     var faceCenter: CGPoint {
         return convertPoint(center, fromView: superview)
     }
 
     var faceRadius: CGFloat {
-        return min(bounds.size.width, bounds.size.height) / 2 * faceScale
+        return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
 
     private struct Scaling {

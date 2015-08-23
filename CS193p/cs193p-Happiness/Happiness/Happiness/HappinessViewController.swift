@@ -13,6 +13,26 @@ class HappinessViewController: UIViewController, FaceViewDataSource {
 	@IBOutlet weak var faceView: FaceView! {
 		didSet {
 			faceView.dataSource = self
+            faceView.addGestureRecognizer(UIPinchGestureRecognizer(target: faceView, action: "scale:"))
+		}
+	}
+	
+	private struct Constants {
+		static let happinessChangeScale: CGFloat = 4
+	}
+	
+	@IBAction func changeHappiness(gesture: UIPanGestureRecognizer) {
+		
+		switch gesture.state {
+		case .Changed: fallthrough
+		case .Ended:
+			let translation = gesture.translationInView(faceView)
+			let happinessChange = -Int(translation.y / Constants.happinessChangeScale)
+			if happinessChange != 0 {
+				happines += happinessChange
+				gesture.setTranslation(CGPointZero, inView: faceView)
+			}
+		default: break
 		}
 	}
 
