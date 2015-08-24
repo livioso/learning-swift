@@ -487,6 +487,7 @@
 				BA2543BC1B849B1300D0A4BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA2543BD1B849B1300D0A4BA /* Build configuration list for PBXNativeTarget "HappinessTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +496,7 @@
 				BA2543BF1B849B1300D0A4BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA2543C01B849B1300D0A4BA /* Build configuration list for PBXNativeTarget "HappinessUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +505,7 @@
 				BA2543C21B849B1300D0A4BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
