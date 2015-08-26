@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ftZ-Vb-TSO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ftZ-Vb-TSO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="M4g-W3-5AV">
                                 <rect key="frame" x="20" y="72" width="560" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f3-Bg-tWu">
@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="-1910" y="22"/>
         </scene>
-        <!--Happiness View Controller-->
+        <!--Diagnosed Happiness View Controller-->
         <scene sceneID="bTf-6P-Zh1">
             <objects>
-                <viewController id="9Wh-Bv-XLR" customClass="HappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9Wh-Bv-XLR" customClass="DiagnosedHappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n1K-m1-GwJ"/>
                         <viewControllerLayoutGuide type="bottom" id="jFg-z7-ZMC"/>
@@ -155,7 +155,15 @@
                             <constraint firstItem="iPd-J7-lvp" firstAttribute="top" secondItem="n1K-m1-GwJ" secondAttribute="bottom" constant="8" symbolic="YES" id="yyh-57-bc3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8jp-nO-658"/>
+                    <navigationItem key="navigationItem" id="8jp-nO-658">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="ymb-N4-sBW">
+                            <connections>
+                                <segue destination="Ma4-Jc-8Vu" kind="popoverPresentation" identifier="showDiagnosticHistory" popoverAnchorBarButtonItem="ymb-N4-sBW" id="Gtg-dv-C8N">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="iPd-J7-lvp" id="1Ia-OR-IHY"/>
                     </connections>
@@ -168,6 +176,41 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-97" y="1218"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="J9y-mZ-cGi">
+            <objects>
+                <viewController id="Ma4-Jc-8Vu" customClass="TextViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jgz-Fn-G8K"/>
+                        <viewControllerLayoutGuide type="bottom" id="rSe-VJ-bds"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yHM-dn-WQF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jXX-Xd-OoY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jXX-Xd-OoY" firstAttribute="top" secondItem="yHM-dn-WQF" secondAttribute="top" id="E4V-R1-u4A"/>
+                            <constraint firstItem="jXX-Xd-OoY" firstAttribute="bottom" secondItem="rSe-VJ-bds" secondAttribute="top" id="QeI-pB-vqf"/>
+                            <constraint firstAttribute="trailing" secondItem="jXX-Xd-OoY" secondAttribute="trailing" id="a7L-dp-zJN"/>
+                            <constraint firstItem="jXX-Xd-OoY" firstAttribute="leading" secondItem="yHM-dn-WQF" secondAttribute="leading" id="sH5-OT-jjw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="jXX-Xd-OoY" id="KV0-nC-PTD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAO-Jr-tLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="1113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PGU-DJ-mxD">
@@ -204,6 +247,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KkP-LB-qok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-909" y="1218"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a93-HA-Vff">
+            <objects>
+                <viewController id="NsS-YF-bh8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bpY-WT-MQE"/>
+                        <viewControllerLayoutGuide type="bottom" id="XHz-HB-SOk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gEe-C8-8BK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YOn-R9-Fu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
