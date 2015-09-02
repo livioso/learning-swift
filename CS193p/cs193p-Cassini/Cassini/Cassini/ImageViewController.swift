@@ -9,6 +9,7 @@
 import UIKit
 
 class ImageViewController: UIViewController, UIScrollViewDelegate {
+	@IBOutlet weak var spinner: UIActivityIndicatorView!
 	
 	@IBOutlet weak var scrollView: UIScrollView! {
 		didSet {
@@ -31,11 +32,19 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 	
 	private func fetchImage() {
 		if let url = imageURL {
-			let imageData = NSData(contentsOfURL: url)
-			if imageData != nil {
-				image = UIImage(data: imageData!)
-			} else {
-				image = nil
+			// multithreaded fetching
+			spinner?.startAnimating()
+			let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
+			dispatch_async(dispatch_get_global_queue(qos, 0)) { () -> Void in
+				let imageData = NSData(contentsOfURL: url)
+				// dispatch back to the main queue
+				dispatch_async(dispatch_get_main_queue()) {
+					if imageData != nil {
+						self.image = UIImage(data: imageData!)
+					} else {
+						self.image = nil
+					}
+				}
 			}
 		}
 	}
@@ -47,6 +56,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
 			imageView.image = newValue
 			imageView.sizeToFit() // expands frame if necessary
 			scrollView?.contentSize = imageView.frame.size
+			spinner?.stopAnimating()
 		}
 	}
 	

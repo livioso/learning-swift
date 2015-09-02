@@ -82,17 +82,23 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMr-XU-boG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </scrollView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4oi-ZZ-Oh1">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jMr-XU-boG" firstAttribute="top" secondItem="j1E-4V-tbM" secondAttribute="top" id="3wQ-zg-KKu"/>
                             <constraint firstAttribute="trailing" secondItem="jMr-XU-boG" secondAttribute="trailing" id="JSN-VD-zFJ"/>
                             <constraint firstItem="jMr-XU-boG" firstAttribute="bottom" secondItem="Wha-Mm-AQh" secondAttribute="top" id="P6w-ee-dDR"/>
+                            <constraint firstItem="4oi-ZZ-Oh1" firstAttribute="centerX" secondItem="j1E-4V-tbM" secondAttribute="centerX" id="djH-Kl-IPa"/>
                             <constraint firstItem="jMr-XU-boG" firstAttribute="leading" secondItem="j1E-4V-tbM" secondAttribute="leading" id="qlY-Ji-dOm"/>
+                            <constraint firstItem="4oi-ZZ-Oh1" firstAttribute="centerY" secondItem="j1E-4V-tbM" secondAttribute="centerY" id="vGT-XG-Vt4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="jMr-XU-boG" id="Ucm-mb-RoA"/>
+                        <outlet property="spinner" destination="4oi-ZZ-Oh1" id="F9G-ch-eNT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggz-5b-xSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
