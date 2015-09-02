@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ybH-tS-a48">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="M9r-uz-X4s">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
@@ -15,12 +15,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQJ-By-5Dc">
+                                <rect key="frame" x="233" y="342" width="135" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <state key="normal" title="Earth"/>
+                                <connections>
+                                    <segue destination="ybH-tS-a48" kind="showDetail" identifier="showEarthImage" id="1aS-uq-gKa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4O-EU-8Pm">
+                                <rect key="frame" x="172" y="188" width="257" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <state key="normal" title="Cassini"/>
+                                <connections>
+                                    <segue destination="ybH-tS-a48" kind="showDetail" identifier="showSaturnImage" id="CLL-t3-XZq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnA-h1-ono">
+                                <rect key="frame" x="233" y="265" width="135" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <state key="normal" title="Saturn"/>
+                                <connections>
+                                    <segue destination="ybH-tS-a48" kind="showDetail" identifier="showCassiniImage" id="PbT-U6-CkE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SQJ-By-5Dc" firstAttribute="top" secondItem="YnA-h1-ono" secondAttribute="bottom" constant="8" symbolic="YES" id="3A6-Ge-ktf"/>
+                            <constraint firstItem="YnA-h1-ono" firstAttribute="trailing" secondItem="SQJ-By-5Dc" secondAttribute="trailing" id="CqZ-ot-PaO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SQJ-By-5Dc" secondAttribute="bottom" constant="183" id="RzE-ZI-XD7"/>
+                            <constraint firstItem="m4O-EU-8Pm" firstAttribute="leading" secondItem="YnA-h1-ono" secondAttribute="trailing" constant="-196" id="SkJ-z0-Lr4"/>
+                            <constraint firstItem="YnA-h1-ono" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TsK-HT-BYS"/>
+                            <constraint firstItem="YnA-h1-ono" firstAttribute="top" secondItem="m4O-EU-8Pm" secondAttribute="bottom" constant="8" id="bPO-a0-9QM"/>
+                            <constraint firstItem="m4O-EU-8Pm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqq-Mn-EH5"/>
+                            <constraint firstItem="YnA-h1-ono" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hbd-TS-IQU"/>
+                            <constraint firstItem="SQJ-By-5Dc" firstAttribute="leading" secondItem="YnA-h1-ono" secondAttribute="leading" id="q1E-Bc-NaT"/>
+                            <constraint firstItem="m4O-EU-8Pm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="138" id="wdl-L1-ZOr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wdl-L1-ZOr"/>
+                                <exclude reference="RzE-ZI-XD7"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="0Fr-2w-fnZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-149" y="303"/>
+            <point key="canvasLocation" x="1329" y="473"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="rXW-WC-0Kd">
@@ -38,7 +83,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggz-5b-xSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743" y="303"/>
+            <point key="canvasLocation" x="521" y="1421"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tj7-sX-c4o">
+            <objects>
+                <navigationController id="hE9-nt-Fuf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aa8-lJ-GcQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="o3X-a4-A4V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0e-j1-iyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="473"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="qPc-92-0IZ">
+            <objects>
+                <splitViewController id="M9r-uz-X4s" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="hE9-nt-Fuf" kind="relationship" relationship="masterViewController" id="Ndf-AV-SLF"/>
+                        <segue destination="ybH-tS-a48" kind="relationship" relationship="detailViewController" id="fSq-YN-xfS"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74d-oF-09j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="831"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1aS-uq-gKa"/>
+    </inferredMetricsTieBreakers>
 </document>
