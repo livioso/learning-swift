@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal" title="Cassini"/>
                                 <connections>
-                                    <segue destination="ybH-tS-a48" kind="showDetail" identifier="showSaturnImage" id="CLL-t3-XZq"/>
+                                    <segue destination="ybH-tS-a48" kind="showDetail" identifier="showCassiniImage" id="CLL-t3-XZq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnA-h1-ono">
@@ -37,7 +37,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal" title="Saturn"/>
                                 <connections>
-                                    <segue destination="ybH-tS-a48" kind="showDetail" identifier="showCassiniImage" id="PbT-U6-CkE"/>
+                                    <segue destination="ybH-tS-a48" kind="showDetail" identifier="showSaturnImage" id="PbT-U6-CkE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,6 +116,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1aS-uq-gKa"/>
+        <segue reference="CLL-t3-XZq"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 				switch identifier {
 				case Storyboard.segueShowCassini:
 					ivc.imageURL = DemoURL.NASA.Cassini
-					ivc.title = "Cassini"
+					ivc.title = "Cassini" 
 				case Storyboard.segueShowSaturn:
 					ivc.imageURL = DemoURL.NASA.Saturn
 					ivc.title = "Saturn"
