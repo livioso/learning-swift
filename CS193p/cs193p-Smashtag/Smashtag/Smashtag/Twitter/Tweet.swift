@@ -16,19 +16,19 @@ import Foundation
 
 public class Tweet : CustomStringConvertible
 {
-    public let text: String
-    public let user: User
+    public var text: String
+    public var user: User
     public let created: NSDate
     public let id: String?
-    public let media = [MediaItem]()
-    public let hashtags = [IndexedKeyword]()
-    public let urls = [IndexedKeyword]()
-    public let userMentions = [IndexedKeyword]()
+    public var media = [MediaItem]()
+    public var hashtags = [IndexedKeyword]()
+    public var urls = [IndexedKeyword]()
+    public var userMentions = [IndexedKeyword]()
 
     public struct IndexedKeyword: CustomStringConvertible
     {
-        public let keyword: String              // will include # or @ or http:// prefix
-        public let range: Range<String.Index>   // index into the Tweet's text property only
+        public var keyword: String              // will include # or @ or http:// prefix
+        public var range: Range<String.Index>   // index into the Tweet's text property only
         public let nsrange: NSRange             // index into an NS[Attributed]String made from the Tweet's text
 
         public init?(data: NSDictionary?, inText: String, prefix: String?) {
@@ -41,7 +41,7 @@ public class Tweet : CustomStringConvertible
                         let end = max(min(endIndex, length), 0)
                         if end > start {
                             range = inText.startIndex.advancedBy(start)...inText.endIndex.advancedBy(-1)
-                            keyword = inText.substringWithRange(range)
+                            self.keyword = inText.substringWithRange(range)
                             if prefix != nil && !keyword.hasPrefix(prefix!) && start > 0 {
                                 range = inText.startIndex.advancedBy(start)...inText.endIndex.advancedBy(-2)
                                 keyword = inText.substringWithRange(range)
@@ -77,7 +77,7 @@ public class Tweet : CustomStringConvertible
                     if let mediaEntities = data?.valueForKeyPath(TwitterKey.Media) as? NSArray {
                         for mediaData in mediaEntities {
                             if let mediaItem = MediaItem(data: mediaData as? NSDictionary) {
-                                media.append(mediaItem)
+                                self.media.append(mediaItem)
                             }
                         }
                     }
@@ -98,6 +98,7 @@ public class Tweet : CustomStringConvertible
         self.text = ""
         self.user = User()
         self.created = NSDate()
+		self.id = nil
         return nil
     }
 
